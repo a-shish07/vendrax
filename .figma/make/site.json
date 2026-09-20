@@ -1,0 +1,10 @@
+{
+  "description": "Vendrax Pvt offers a modern e-commerce platform for electronics and clothing, featuring a user-friendly interface, real-time cart updates, and convenient WhatsApp ordering.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
