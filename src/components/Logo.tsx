@@ -1,4 +1,4 @@
-import logoImage from './logooo.png'
+import logoImage from '../public/logo.png'
 
 interface LogoProps {
   variant?: 'light' | 'dark'
