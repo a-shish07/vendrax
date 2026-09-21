@@ -403,62 +403,7 @@ export default function Home() {
             </button>
 
             {/* Clothing */}
-            <button
-              type="button"
-              onClick={() => navigate('products')}
-              className="
-                group
-                relative
-                h-56
-                overflow-hidden
-                rounded-2xl
-                text-left
-                sm:h-64
-              "
-            >
-              <img
-                src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=500&fit=crop&auto=format"
-                alt="Clothing"
-                className="
-                  h-full
-                  w-full
-                  object-cover
-                  transition-transform
-                  duration-700
-                  group-hover:scale-105
-                "
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-brand via-brand/35 to-brand/5" />
-
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/50">
-                  Fashion & Style
-                </p>
-
-                <div className="mt-1 flex items-end justify-between gap-4">
-                  <h3 className="font-display text-2xl text-white sm:text-3xl">
-                    Clothing
-                  </h3>
-
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all group-hover:border-accent group-hover:bg-accent">
-                    <svg
-                      className="h-3.5 w-3.5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 12h14M13 6l6 6-6 6"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </button>
+        
           </div>
 
           <button
