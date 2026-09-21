@@ -1,4 +1,4 @@
-import logoImage from '../../public/logo.png'
+// import logoImage from '../../public/logo.png'
 
 interface LogoProps {
   variant?: 'light' | 'dark'
@@ -36,7 +36,7 @@ export default function Logo({
     >
       {/* Original logo */}
       <img
-        src={logoImage}
+        src="/logo.png"
         alt=""
         width={current.logo}
         height={current.logo}
