@@ -332,21 +332,21 @@ export const products: Product[] = [
       'Modern air fryer designed for convenient cooking with reduced oil compared with traditional deep-frying methods. Ideal for preparing fries, snacks, vegetables and other suitable foods. Its practical countertop design makes everyday cooking easier while offering a convenient way to prepare crispy-style dishes at home.',
   },
 
-  {
-    id: 21,
-    name: 'Premium Smartwatch',
-    price: 5999,
-    image: '/products/21a-200kb.jpeg',
-    images: [
-      '/products/21a-200kb.jpeg',
-      '/products/21b-200kb.jpeg',
-    ],
-    category: 'Wearables',
-    rating: 0,
-    reviews: 0,
-    description:
-      'Premium smartwatch designed to combine everyday connectivity, activity tracking and convenient smart features on your wrist. Suitable for work, workouts and daily routines, it provides quick access to useful information without constantly reaching for your smartphone. Its modern design complements both casual and professional outfits.',
-  },
+  // {
+  //   id: 21,
+  //   name: 'Premium Smartwatch',
+  //   price: 5999,
+  //   image: '/products/21a-200kb.jpeg',
+  //   images: [
+  //     '/products/21a-200kb.jpeg',
+  //     '/products/21b-200kb.jpeg',
+  //   ],
+  //   category: 'Wearables',
+  //   rating: 0,
+  //   reviews: 0,
+  //   description:
+  //     'Premium smartwatch designed to combine everyday connectivity, activity tracking and convenient smart features on your wrist. Suitable for work, workouts and daily routines, it provides quick access to useful information without constantly reaching for your smartphone. Its modern design complements both casual and professional outfits.',
+  // },
 
   {
     id: 22,

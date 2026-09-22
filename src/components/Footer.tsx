@@ -1,18 +1,21 @@
-
-import { useApp } from '../App'
+import { Link, useNavigate } from 'react-router-dom'
 import Logo from './Logo'
-import type { Page } from '../App'
 
-const quickLinks: { label: string; page: Page }[] = [
-  { label: 'Home', page: 'home' },
-  { label: 'Products', page: 'products' },
-  { label: 'About Us', page: 'about' },
-  { label: 'Contact', page: 'contact' },
-  { label: 'Cart', page: 'cart' },
+const quickLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'Products', path: '/products' },
+  { label: 'About Us', path: '/about' },
+  { label: 'Contact', path: '/contact' },
+  { label: 'Cart', path: '/cart' },
+]
+
+const legalLinks = [
+  { label: 'Terms & Conditions', path: '/terms' },
+  { label: 'Refund Policy', path: '/refund-policy' },
 ]
 
 export default function Footer() {
-  const { navigate } = useApp()
+  const navigate = useNavigate()
 
   return (
     <footer className="bg-brand text-white">
@@ -23,7 +26,7 @@ export default function Footer() {
 
         {/* -------------------------------------------------------
             TOP CTA / BRAND INTRO
-        ------------------------------------------------------- */}
+        -------------------------------------------------------- */}
         <div className="border-b border-white/10 py-10 sm:py-12">
           <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
 
@@ -35,6 +38,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-2">
                 <span className="h-px w-7 bg-accent" />
+
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">
                   Shop with confidence
                 </span>
@@ -58,6 +62,7 @@ export default function Footer() {
             {/* Support Card */}
             <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
               <div className="flex items-start gap-3">
+
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <svg
                     className="h-5 w-5"
@@ -71,6 +76,7 @@ export default function Footer() {
                       strokeLinejoin="round"
                       d="M21 11.5a8.38 8.38 0 01-9 8.5 8.7 8.7 0 01-4.15-1.05L3 20l1.08-4.57A8.5 8.5 0 113 11.5"
                     />
+
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -91,10 +97,11 @@ export default function Footer() {
 
                   <button
                     type="button"
-                    onClick={() => navigate('contact')}
-                    className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-accent transition-colors hover:text-white"
+                    onClick={() => navigate('/contact')}
+                    className="group mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-accent transition-colors hover:text-white"
                   >
                     Contact support
+
                     <svg
                       className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5"
                       viewBox="0 0 24 24"
@@ -117,7 +124,7 @@ export default function Footer() {
 
         {/* -------------------------------------------------------
             FOOTER CONTENT
-        ------------------------------------------------------- */}
+        -------------------------------------------------------- */}
         <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_1fr] lg:gap-12 lg:py-12">
 
           {/* =====================================================
@@ -192,7 +199,9 @@ export default function Footer() {
                     rx="5"
                     ry="5"
                   />
+
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+
                   <line
                     x1="17.5"
                     y1="6.5"
@@ -265,11 +274,10 @@ export default function Footer() {
             </h3>
 
             <ul className="mt-5 space-y-2.5">
-              {quickLinks.map(({ label, page }) => (
-                <li key={page}>
-                  <button
-                    type="button"
-                    onClick={() => navigate(page)}
+              {quickLinks.map(({ label, path }) => (
+                <li key={path}>
+                  <Link
+                    to={path}
                     className="
                       group
                       flex
@@ -295,14 +303,14 @@ export default function Footer() {
                     />
 
                     {label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* =====================================================
-              CUSTOMER
+              CUSTOMER + LEGAL
           ====================================================== */}
           <div>
             <h3 className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/35">
@@ -311,45 +319,61 @@ export default function Footer() {
 
             <ul className="mt-5 space-y-3">
               <li>
-                <button
-                  type="button"
-                  onClick={() => navigate('products')}
+                <Link
+                  to="/products"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
                   Shop Products
-                </button>
+                </Link>
               </li>
 
               <li>
-                <button
-                  type="button"
-                  onClick={() => navigate('cart')}
+                <Link
+                  to="/cart"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
                   Your Cart
-                </button>
+                </Link>
               </li>
 
               <li>
-                <button
-                  type="button"
-                  onClick={() => navigate('contact')}
+                <Link
+                  to="/contact"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
                   Contact Support
-                </button>
+                </Link>
               </li>
 
               <li>
-                <button
-                  type="button"
-                  onClick={() => navigate('about')}
+                <Link
+                  to="/about"
                   className="text-xs text-white/55 transition-colors hover:text-white"
                 >
                   About Vendrax
-                </button>
+                </Link>
               </li>
             </ul>
+
+            {/* Legal */}
+            <div className="mt-7 border-t border-white/10 pt-5">
+              <h3 className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/35">
+                Legal
+              </h3>
+
+              <ul className="mt-4 space-y-3">
+                {legalLinks.map(({ label, path }) => (
+                  <li key={path}>
+                    <Link
+                      to={path}
+                      className="text-xs text-white/55 transition-colors hover:text-white"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* =====================================================
@@ -394,6 +418,7 @@ export default function Footer() {
                       strokeLinejoin="round"
                       d="M4 5h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7a2 2 0 012-2z"
                     />
+
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -406,6 +431,7 @@ export default function Footer() {
                   <span className="block text-[9px] uppercase tracking-wider text-white/30">
                     Email
                   </span>
+
                   <span className="mt-0.5 block truncate text-[11px] text-white/65 group-hover:text-white">
                     vendraxpvt@gmail.com
                   </span>
@@ -447,6 +473,7 @@ export default function Footer() {
                   <span className="block text-[9px] uppercase tracking-wider text-white/30">
                     WhatsApp
                   </span>
+
                   <span className="mt-0.5 block text-[11px] text-white/65 group-hover:text-white">
                     Chat with us
                   </span>
@@ -468,7 +495,12 @@ export default function Footer() {
                       strokeLinejoin="round"
                       d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1116 0z"
                     />
-                    <circle cx="12" cy="10" r="2.5" />
+
+                    <circle
+                      cx="12"
+                      cy="10"
+                      r="2.5"
+                    />
                   </svg>
                 </span>
 
@@ -476,6 +508,7 @@ export default function Footer() {
                   <span className="block text-[9px] uppercase tracking-wider text-white/30">
                     Serving
                   </span>
+
                   <span className="mt-0.5 block text-[11px] text-white/65">
                     India
                   </span>
@@ -485,9 +518,39 @@ export default function Footer() {
           </div>
         </div>
 
-        
+        {/* =========================================================
+            BOTTOM BAR
+        ========================================================== */}
+        <div className="border-t border-white/10 py-5">
+          <div className="flex flex-col gap-3 text-[10px] text-white/35 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {new Date().getFullYear()} Vendrax Pvt. All rights reserved.
+            </p>
 
-       
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <Link
+                to="/terms"
+                className="transition-colors hover:text-white"
+              >
+                Terms & Conditions
+              </Link>
+
+              <Link
+                to="/refund-policy"
+                className="transition-colors hover:text-white"
+              >
+                Refund Policy
+              </Link>
+
+              <Link
+                to="/contact"
+                className="transition-colors hover:text-white"
+              >
+                Support
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   )
