@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import { products } from '../data/products'
 
@@ -76,6 +76,11 @@ const filterTabs = [
     label: 'Home Appliances',
     shortLabel: 'Appliances',
   },
+  {
+    key:'Clothing',
+    label:'Clothing',
+    shortLabel:'Clothing',
+  }
 ]
 
 const sortOptions: {
@@ -241,10 +246,21 @@ const ArrowRightIcon = ({
 /* -------------------------------------------------------------------------- */
 
 export default function Products() {
-  const [filter, setFilter] = useState<Filter>('all')
-  const [search, setSearch] = useState('')
-  const [sort, setSort] = useState<Sort>('featured')
-  const [sortOpen, setSortOpen] = useState(false)
+const [filter, setFilter] = useState<Filter>('all')
+const [search, setSearch] = useState('')
+const [sort, setSort] = useState<Sort>('featured')
+const [sortOpen, setSortOpen] = useState(false)
+
+useEffect(() => {
+  const savedCategory = sessionStorage.getItem(
+    'vendrax-product-category'
+  )
+
+  if (savedCategory) {
+    setFilter(savedCategory)
+    sessionStorage.removeItem('vendrax-product-category')
+  }
+}, [])
 
   /* ------------------------------------------------------------------------ */
   /* Category counts                                                          */

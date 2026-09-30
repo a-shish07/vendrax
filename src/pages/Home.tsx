@@ -404,8 +404,11 @@ export default function Home() {
 
             {/* Clothing */}
            <button
-              type="button"
-              onClick={() => navigate('products')}
+  type="button"
+  onClick={() => {
+    sessionStorage.setItem('vendrax-product-category', 'Clothing')
+    navigate('products')
+  }}
               className="
                 group
                 relative

@@ -332,21 +332,21 @@ export const products: Product[] = [
       'Modern air fryer designed for convenient cooking with reduced oil compared with traditional deep-frying methods. Ideal for preparing fries, snacks, vegetables and other suitable foods. Its practical countertop design makes everyday cooking easier while offering a convenient way to prepare crispy-style dishes at home.',
   },
 
-  // {
-  //   id: 21,
-  //   name: 'Premium Smartwatch',
-  //   price: 5999,
-  //   image: '/products/21a-200kb.jpeg',
-  //   images: [
-  //     '/products/21a-200kb.jpeg',
-  //     '/products/21b-200kb.jpeg',
-  //   ],
-  //   category: 'Wearables',
-  //   rating: 0,
-  //   reviews: 0,
-  //   description:
-  //     'Premium smartwatch designed to combine everyday connectivity, activity tracking and convenient smart features on your wrist. Suitable for work, workouts and daily routines, it provides quick access to useful information without constantly reaching for your smartphone. Its modern design complements both casual and professional outfits.',
-  // },
+  {
+    id: 21,
+    name: 'Premium Smartwatch',
+    price: 5999,
+    image: '/products/21a-200kb.jpeg',
+    images: [
+      '/products/21a-200kb.jpeg',
+      '/products/21b-200kb.jpeg',
+    ],
+    category: 'Wearables',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Premium smartwatch designed to combine everyday connectivity, activity tracking and convenient smart features on your wrist. Suitable for work, workouts and daily routines, it provides quick access to useful information without constantly reaching for your smartphone. Its modern design complements both casual and professional outfits.',
+  },
 
   {
     id: 22,
@@ -650,6 +650,165 @@ export const products: Product[] = [
     reviews: 0,
     description:
       'Premium air conditioner designed to provide comfortable indoor cooling during warm weather. Suitable for bedrooms, living rooms and other compatible spaces, it combines a modern appliance design with convenient temperature control. Ideal for households seeking a practical cooling solution for everyday residential use.',
+  },
+    {
+    id: 41,
+    name: 'Basic Cotton T-Shirt',
+    price: 399,
+    image: '/products/1a.jpeg',
+    images: [
+      '/products/1a.jpeg',
+      '/products/1b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Comfortable everyday cotton T-shirt with a soft, breathable fabric and classic fit. Suitable for casual wear and daily outings.',
+  },
+
+  {
+    id: 42,
+    name: 'Tank Top',
+    price: 399,
+    image: '/products/2a.jpeg',
+    images: [
+      '/products/2a.jpeg',
+      '/products/2b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Lightweight and comfortable tank top designed for casual and active wear. Breathable construction provides easy movement and comfort.',
+  },
+
+  {
+    id: 43,
+    name: 'Linen Blend Shirt',
+    price: 999,
+    image: '/products/3a.jpeg',
+    images: [
+      '/products/3a.jpeg',
+      '/products/3b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Stylish linen-blend shirt offering a lightweight, breathable feel with a relaxed premium look. Ideal for casual occasions and summer outfits.',
+  },
+
+  {
+    id: 44,
+    name: "Men's Cargo Pants",
+    price: 1199,
+    image: '/products/4a.jpeg',
+    images: [
+      '/products/4a.jpeg',
+      '/products/4b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      "Versatile men's cargo pants featuring a comfortable fit and practical utility pockets. Designed for casual everyday and outdoor styling.",
+  },
+
+  {
+    id: 45,
+    name: 'Bomber Jacket',
+    price: 1999,
+    image: '/products/5a.jpeg',
+    images: [
+      '/products/5a.jpeg',
+      '/products/5b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Modern bomber jacket with a versatile silhouette, comfortable construction, and stylish finish. Perfect for casual outfits and transitional weather.',
+  },
+
+  {
+    id: 46,
+    name: 'Premium Cashmere-Blend Sweater',
+    price: 8999,
+    image: '/products/6a.jpeg',
+    images: [
+      '/products/6a.jpeg',
+      '/products/6b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Luxurious cashmere-blend sweater offering a soft, warm, and refined feel. Designed with a sophisticated silhouette for premium everyday and occasion wear.',
+  },
+
+  {
+    id: 47,
+    name: "Premium Women's Blazer",
+    price: 7999,
+    image: '/products/7a.jpeg',
+    images: [
+      '/products/7a.jpeg',
+      '/products/7b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      "Elegant women's blazer featuring a structured silhouette and refined finish. Perfect for professional outfits, formal occasions, and sophisticated styling.",
+  },
+
+  {
+    id: 48,
+    name: 'Premium Ethnic Dress',
+    price: 8999,
+    image: '/products/8a.jpeg',
+    images: [
+      '/products/8a.jpeg',
+      '/products/8b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Premium ethnic dress combining traditional-inspired detailing with a contemporary silhouette. Designed for festive celebrations, cultural occasions, and elegant evening wear.',
+  },
+
+  {
+    id: 49,
+    name: 'Premium Trench Coat',
+    price: 24999,
+    image: '/products/9a.jpeg',
+    images: [
+      '/products/9a.jpeg',
+      '/products/9b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Sophisticated premium trench coat featuring a timeless silhouette, structured design, and elegant finish. Ideal for elevated everyday styling and formal occasions.',
+  },
+
+  {
+    id: 50,
+    name: 'Premium Designer Saree',
+    price: 24999,
+    image: '/products/10a.jpeg',
+    images: [
+      '/products/10a.jpeg',
+      '/products/10b.jpeg',
+    ],
+    category: 'Clothing',
+    rating: 0,
+    reviews: 0,
+    description:
+      'Elegant premium designer saree featuring refined detailing, luxurious fabric, and a sophisticated drape. Designed for weddings, celebrations, festive occasions, and special events.',
   },
 ]
 
